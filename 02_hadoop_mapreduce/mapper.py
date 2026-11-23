@@ -12,6 +12,6 @@ for line in sys.stdin:
     try:
         date = parts[0].split(" ")[0]
         distance = float(parts[3])
-        print(f"{date}\t{distance}\t1")
+        print("{}\t{}\t1".format(date, distance))
     except ValueError:
         continue

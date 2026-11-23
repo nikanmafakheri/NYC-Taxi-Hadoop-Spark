@@ -22,11 +22,11 @@ for line in sys.stdin:
     else:
         if current_date is not None:
             avg_distance = total_distance / total_trips
-            print(f"{current_date}\t{total_trips}\t{avg_distance:.2f}")
+            print("{}\t{}\t{:.2f}".format(current_date, total_trips, avg_distance))
         current_date = date
         total_distance = distance
         total_trips = count
 
 if current_date is not None:
     avg_distance = total_distance / total_trips
-    print(f"{current_date}\t{total_trips}\t{avg_distance:.2f}")
+    print("{}\t{}\t{:.2f}".format(current_date, total_trips, avg_distance))
